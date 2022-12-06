@@ -4,39 +4,35 @@
 #2) Uma listagem com as pessoas mais pesadas;
 #3) Uma listagem com as pessoas mais leve.
 
-#aux = list()
-cadastro = [['A', 100], ['B', 80], ['C', 60]] #list()
-#qtd = int(input("Entre com a quantidade de cadastros: "))
+aux = list()
+cadastro = list() #[['A', 50], ['B', 110], ['C', 60]]
+qtd = int(input("Entre com a quantidade de cadastros: "))
 
 
-"""for i in range(0, qtd):
+for i in range(0, qtd):
     aux.append(str(input("Entre com o nome: ")))
     aux.append(int(input("Entre com o peso: ")))
     cadastro.append(aux[:])
-    aux.clear()"""
+    aux.clear()
 
-"""print(cadastro)
-print(cadastro[0])
-print(cadastro[1])
-print(cadastro[2])"""
-
-for pessoa in cadastro:
-    for i in range(0, 2):
-        print(f"{pessoa[i]}")
-
-
-"""maior_peso = cadastros[1]
-
-for peso in cadastros:
-    if peso[1] > maior_peso:
-        maior_peso = peso[1]
+for i in range(0, len(cadastro)):
+    if i == 0:
+        maior_peso = menor_peso = cadastro[0][1]
     else:
-        maior_peso = maior_peso
+        if cadastro[i][1] > maior_peso:
+            maior_peso = cadastro[i][1]
 
-print(cadastros)
-print(f"1) Quantidade de cadastros = {qtdcadastros}")
-print(maior_peso)
-"""
+#            mais_gordo = cadastro[i][0]
+        if cadastro[i][1] < menor_peso:
+            menor_peso = cadastro[i][1]
+#            mais_magro = cadastro[i][0]
+
+
+
+print(cadastro)
+print(f"1) Quantidade de cadastros = {qtd}")
+print(f'2) MAIOR peso cadastrado foi de {maior_peso} de {mais_gordo}, MENOR peso cadastrado foi de {menor_peso} foi de {mais_magro}')
+
 
 
 
